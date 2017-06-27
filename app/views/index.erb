@@ -4,4 +4,5 @@
 
 <% @robots.each do |robot| %>
   <h3><a href="robots/<%= robot.id %>"><%= robot.name %></a></h3>
+  <a href="robots/<%= robot.id %>/edit">Edit</a>
 <% end %>
