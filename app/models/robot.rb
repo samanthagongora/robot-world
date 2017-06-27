@@ -1,9 +1,10 @@
 require 'sqlite3'
 
 class Robot
-  attr_reader :name
+  attr_reader :name, :id
 
   def initialize(robot_params)
+    @id       = robot_params["id"] if robot_params["id"]
     @name     = robot_params["name"]
     @database = SQLite3::Database.new('db/robot_world_development.db')
     @database.results_as_hash = true

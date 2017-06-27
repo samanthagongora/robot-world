@@ -8,8 +8,8 @@ class RobotWorldApp < Sinatra::Base
     erb :index
   end
 
-  get "/robots/:id" do
-    @robot = Robot.find(:id)
+  get "/robots/:id" do |id|
+    @robot = Robot.find(id)
     erb :show
   end
 end
